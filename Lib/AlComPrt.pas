@@ -427,6 +427,7 @@ end;
 procedure TAlCommPort.FireErrEvent;
 begin
   if Assigned(FOnError) then FOnError(Self);
+  SetOpen(false);
 end;
 
 
